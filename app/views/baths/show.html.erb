@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bath.name %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @bath.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @bath.lon %>
+</p>
+
+<p>
+  <strong>Clean:</strong>
+  <%= @bath.clean %>
+</p>
+
+<p>
+  <strong>Handicapped:</strong>
+  <%= @bath.handicapped %>
+</p>
+
+<p>
+  <strong>Near:</strong>
+  <%= @bath.near %>
+</p>
+
+<p>
+  <strong>Supplies:</strong>
+  <%= @bath.supplies %>
+</p>
+
+<%= link_to 'Edit', edit_bath_path(@bath) %> |
+<%= link_to 'Back', baths_path %>

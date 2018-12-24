@@ -1,0 +1,52 @@
+<%= form_with(model: bath, local: true) do |form| %>
+  <% if bath.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bath.errors.count, "error") %> prohibited this bath from being saved:</h2>
+
+      <ul>
+      <% bath.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :bath_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat, id: :bath_lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lon %>
+    <%= form.text_field :lon, id: :bath_lon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clean %>
+    <%= form.number_field :clean, id: :bath_clean %>
+  </div>
+
+  <div class="field">
+    <%= form.label :handicapped %>
+    <%= form.number_field :handicapped, id: :bath_handicapped %>
+  </div>
+
+  <div class="field">
+    <%= form.label :near %>
+    <%= form.number_field :near, id: :bath_near %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supplies %>
+    <%= form.number_field :supplies, id: :bath_supplies %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

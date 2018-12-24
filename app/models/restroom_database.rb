@@ -1,0 +1,2 @@
+class RestroomDatabase < ApplicationRecord
+end

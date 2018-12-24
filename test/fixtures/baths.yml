@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lat: 1.5
+  lon: 1.5
+  clean: 1
+  handicapped: 1
+  near: 1
+  supplies: 1
+
+two:
+  name: MyString
+  lat: 1.5
+  lon: 1.5
+  clean: 1
+  handicapped: 1
+  near: 1
+  supplies: 1

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Where is Toliet?</h1>
+
+<table>
+  <thead class="hi">
+    <tr>
+      <th>Name</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th>Clean</th>
+      <th>Handicapped</th>
+      <th>Near</th>
+      <th>Supplies</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @baths.each do |bath| %>
+      <tr>
+        <td><%= bath.name %></td>
+        <td><%= bath.lat %></td>
+        <td><%= bath.lon %></td>
+        <td><%= bath.clean %></td>
+        <td><%= bath.handicapped %></td>
+        <td><%= bath.near %></td>
+        <td><%= bath.supplies %></td>
+        <td><%= link_to 'Show', bath %></td>
+        <td><%= link_to 'Edit', edit_bath_path(bath) %></td>
+        <td><%= link_to 'Destroy', bath, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bath', new_bath_path %>
+<%= link_to "Go back", "/" %>
